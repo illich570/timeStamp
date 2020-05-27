@@ -1,2 +1,2 @@
 # timeStamp
-timeStamp UTC API made with Node &amp; ExpressJs.
+UTC timeStamp API made with Node, Pug &amp; ExpressJs.
