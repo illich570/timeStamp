@@ -5,7 +5,9 @@
 }
 
 :root{
-  --font-family: sans-serif;
+  --font-family: 'Montserrat',sans-serif;
+  --bg-color: #7FC8F8;
+  --icon-color: #235789;
 }
 
 body{

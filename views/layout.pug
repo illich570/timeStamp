@@ -3,6 +3,7 @@ html(lang='en')
   head
     title This is pug!
     link(rel='stylesheet', href='/css/main.css')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap")
     script(src="https://kit.fontawesome.com/35e9411073.js", crossorigin="anonymous")
   body
   header.header
@@ -11,7 +12,7 @@ html(lang='en')
     img(src="/assets/time.svg", alt="dibujo de una mujer con un reloj de pared").draw
     if query
       include result
-      a(href="http://localhost:8000") Volver atras
+      a.btn-return(href="http://localhost:8000") Volver atras
     else
       include home
   footer.footer
@@ -21,7 +22,7 @@ html(lang='en')
         i.fab.fa-free-code-camp.fa-2x(aria-hidden='true')
       a(href="https://www.codepen.io/illich570", target="_blank", rel="noopener noreferrer")
         i.fab.fa-codepen.fa-2x(aria-hidden='true')
-      a(href="https://www.github.org/illich570", target="_blank", rel="noopener noreferrer")
+      a(href="https://www.github.com/illich570", target="_blank", rel="noopener noreferrer")
         i.fab.fa-github.fa-2x(aria-hidden='true')
       a(href="https://www.twitter.com/illichr", target="_blank", rel="noopener noreferrer")
         i.fab.fa-twitter.fa-2x(aria-hidden='true')

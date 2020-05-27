@@ -1,7 +1,7 @@
 @import "layout.css";
 
 body{
-  background: skyblue;
+  background: var(--bg-color);
 }
 
 .container{
@@ -35,4 +35,34 @@ body{
 
 .fab{
   margin: 0.5rem;
+  color: var(--icon-color);
+}
+
+.container__home{
+  margin-top: 1.5rem;
+}
+
+.container__result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+
+.date{
+  color: red;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.btn-return{
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+  background: var(--icon-color);
+  color: white;
+  margin-top: 2rem;
+  border-radius: 10px;
 }
