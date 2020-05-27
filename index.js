@@ -6,23 +6,31 @@ const cors = require('cors');
 
 
 App.set('views', path.join(__dirname, 'views'));
-App.use(express.static("public"));
+App.use(express.static(__dirname + '/public'));
 App.set("view engine", "pug");
 App.use(cors());
 
 App.get('/', (req,res) =>{
-  res.render('index', {title: 'Illich', message: ' This is a message!'});
+  res.render('layout',
+  {
+    query: false, title: 'tu mama'
+  });
 })
 
-App.get('/api/timestamp', (req,res) => {
+App.get("/api/timestamp", (req, res) => {
   const timeDate = new Date();
-  res.send({ unix: timeDate.getTime(), utc: timeDate.toUTCString()});
-})
+  res.render("layout", {
+    query: true,
+    time: timeDate
+  });
+});
 
 App.get('/api/timestamp/:time?', (req,res) =>{
     const timeDate = createDate(req.params.time);
-    res.send({unix: timeDate.getTime(), utc: timeDate.toUTCString()});
-
+    timeDate == 'Invalid Date' ?
+      res.render('error') :
+      res.render('layout',
+      {query: true, time: timeDate});
 })
 
 function createDate(date){

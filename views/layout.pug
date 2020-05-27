@@ -1,0 +1,27 @@
+
+html(lang='en')
+  head
+    title This is pug!
+    link(rel='stylesheet', href='/css/main.css')
+    script(src="https://kit.fontawesome.com/35e9411073.js", crossorigin="anonymous")
+  body
+  header.header
+    h1 TimeStamp API
+  .container
+    img(src="/assets/time.svg", alt="dibujo de una mujer con un reloj de pared").draw
+    if query
+      include result
+      a(href="http://localhost:8000") Volver atras
+    else
+      include home
+  footer.footer
+    span TimeStamp made by @IllichR
+    .footer__icons
+      a(href="https://www.freecodecamp.org/illich570", target="_blank", rel="noopener noreferrer")
+        i.fab.fa-free-code-camp.fa-2x(aria-hidden='true')
+      a(href="https://www.codepen.io/illich570", target="_blank", rel="noopener noreferrer")
+        i.fab.fa-codepen.fa-2x(aria-hidden='true')
+      a(href="https://www.github.org/illich570", target="_blank", rel="noopener noreferrer")
+        i.fab.fa-github.fa-2x(aria-hidden='true')
+      a(href="https://www.twitter.com/illichr", target="_blank", rel="noopener noreferrer")
+        i.fab.fa-twitter.fa-2x(aria-hidden='true')
