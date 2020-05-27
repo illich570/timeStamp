@@ -1,8 +1,12 @@
 
 html(lang='en')
   head
-    title This is pug!
+    title Timestamp API
     link(rel='stylesheet', href='/css/main.css')
+    link(rel="apple-touch-icon", href="/assets/apple-touch-icon.png")
+    link(rel="icon", href="/assets/favicon-32x32.png", type="image/png")
+    link(rel="icon", href="/assets/favicon-16x16.png", type="image/png")
+    link(rel="manifest", href="/assets/site.webmanifest")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap")
     script(src="https://kit.fontawesome.com/35e9411073.js", crossorigin="anonymous")
   body
@@ -12,7 +16,7 @@ html(lang='en')
     img(src="/assets/time.svg", alt="dibujo de una mujer con un reloj de pared").draw
     if query
       include result
-      a.btn-return(href="http://localhost:8000") Volver atras
+      a.btn-return(href="https://illich-timestamp.glitch.me/") Volver atras
     else
       include home
   footer.footer
